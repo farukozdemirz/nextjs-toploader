@@ -1,11 +1,15 @@
 {
-  "name": "@farukozdemirz/nextjs-toploader",
+  "name": "mentoredy_nextjs-toploader",
   "version": "1.0.0",
   "description": "A Next.js Top Loading Bar component made using nprogress, works with Next.js 14 and React.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build-lib": "tsup",
+    "build": "tsup && npm link && cd example && npm link nextjs-toploader",
     "lint": "eslint --fix --cache src/",
     "format": "prettier --write \"src/**/*.{ts,tsx}\"",
     "typecheck": "tsc -p tsconfig.json"
@@ -20,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheSGJ/nextjs-toploader.git"
+    "url": "git+https://github.com/farukozdemirz/nextjs-toploader.git"
   },
   "keywords": [
     "Next",
